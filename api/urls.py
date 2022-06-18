@@ -10,6 +10,7 @@ urlpatterns = [
     path('profile-info/', profileInfo),
 
     path('get-shop-name/', getShopName),
+    path('get-shop-name/<str:pk>', getSingleShopName),
 
     path('add-coffee/', addCoffee),
     path('get-coffee/', getCoffee),

@@ -53,6 +53,14 @@ def getShopName(request):
     })
 
 
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def getSingleShopName(request, pk):
+    shopName = ShopName.objects.get(name=pk)
+    serializer = ShopNameSerializers(shopName, many=False)
+    return Response(serializer.data)
+
+
 # Add coffee item
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
