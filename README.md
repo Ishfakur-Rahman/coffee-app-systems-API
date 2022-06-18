@@ -36,6 +36,8 @@
 'make-order/' - User can make a order
 
 'delete-order/order_id/' - (e.g: delete-order/3/) Use the order ID to delete an order from database
+'get-shop-name/' - all the shop details will be provided
+'get-shop-name/shopName/' - required shop details will be provided
 ```
 
 ## Register - POST Request
@@ -264,6 +266,25 @@ Read flutter documentation for more info.
 ## Delete an order - DELETE Request
 ```bash
 Use 'delete-order/order_id/' to delete an order from server. You need to pass the order id to delete an order.
+
+and pass headers{
+"Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
+}
+Read flutter documentation for more info.
+```
+```bash
+## Get all the  shopdetails available
+Use 'get-shop-name/' to fetch all the shop name with details
+
+and pass headers{
+"Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
+}
+Read flutter documentation for more info.
+```
+
+```bash
+## Get only single shopdetails 
+Use 'get-shop-name/shop_name/' to fetch the required shop name with details
 
 and pass headers{
 "Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
