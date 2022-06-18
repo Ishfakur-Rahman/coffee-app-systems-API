@@ -1,1 +1,2 @@
-web: gunicorn coffee_app_system.wsgi --log-file -
+web: gunicorn coffee_app_systems.wsgi
+release: python manage.py migrate
