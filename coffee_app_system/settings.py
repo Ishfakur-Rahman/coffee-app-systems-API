@@ -90,8 +90,12 @@ WSGI_APPLICATION = 'coffee_app_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3v35t5470cn21',
+        'USER': 'enigeeytnsvyez',
+        'PASSWORD': '4bf21d8e665bdcff33f627734040ee3eb1a818657265eac39ef4bcb96ce49688',
+        'HOST': 'ec2-52-22-136-117.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
