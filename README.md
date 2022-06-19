@@ -9,7 +9,9 @@
 
 'get-user/token/' - (e.g: get-user/234sdflasdg/) Pass the token and get the user name and the user role
 
-'profile-info/' - Add profile info to the database
+'add-profile-info/' - Add profile info to the database
+'get-profile-info/' - get profile info from the database
+'update-profile-info/' - update profile info to the database
 
 'add-coffee/' - Add a coffee items to the database
 
@@ -81,13 +83,39 @@ How to pass json data using 'profile-info/' endpoint-
 Pass image file into "profile"
 
 {
-    "user": "mosta",
-    "profile": "image file",
-    "contact": 17,
-    "address": "chittagong",
-    "shopName": 1
+    "user": "ishfak",
+    "contact": "231341234",
+    "profile": "image",
+    "address":"Hotel the peninsuela, GEC, Chittagong, Bangladesh",
+    "shopName": "412"
 }
 
+and pass headers{
+"Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
+}
+Read flutter documentation for more info.
+```
+## Get a profile info - GET Request
+```bash
+How to pass json data using 'get-profile-info/username/' endpoint-
+Example - 'get-profile-info/ishfak/'
+and pass headers{
+"Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
+}
+Read flutter documentation for more info.
+```
+## Update a profile info - PATCH Request
+```bash
+How to pass json data using 'get-profile-info/username/' endpoint-
+Pass image file into "profile"
+Example - 'update-profile-info/ishfak/'
+{
+    "user": "ishfak",
+    "contact": "231341234",
+    "image": "image.jpeg",
+    "address":"Hotel the peninsuela, GEC, Chittagong, Bangladesh",
+    "shopName": "2312"
+}
 and pass headers{
 "Authorization": "Token ad6a56f22bba5043a1df2bc44655f205be7057a3"
 }

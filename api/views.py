@@ -44,6 +44,25 @@ def profileInfo(request):
 
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
+def getProfileInfo(request, pk):
+    profileInfo = ProfileInfo.objects.get(user=pk)
+    serializer = ProfileInfoSerializers(profileInfo, many=False)
+    return Response(serializer.data)
+
+
+@permission_classes([IsAuthenticated])
+@api_view(['PATCH'])
+def updateProfileInfo(request, pk):
+    profileInfo = ProfileInfo.objects.get(user=pk)
+    serializer = ProfileInfoSerializers(profileInfo, data=request.data, partial=True)
+    if serializer.is_valid():
+        serializer.save()
+
+    return Response(serializer.data)
+
+
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
 def getShopName(request):
     shopName = ShopName.objects.all()
     serializer = ShopNameSerializers(shopName, many=True)
