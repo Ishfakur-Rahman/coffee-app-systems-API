@@ -272,8 +272,8 @@ and pass headers{
 }
 Read flutter documentation for more info.
 ```
+## Get all the  shopdetails available - GET request
 ```bash
-## Get all the  shopdetails available
 Use 'get-shop-name/' to fetch all the shop name with details
 
 and pass headers{
@@ -282,8 +282,8 @@ and pass headers{
 Read flutter documentation for more info.
 ```
 
+## Get only single shopdetails - GET request
 ```bash
-## Get only single shopdetails 
 Use 'get-shop-name/shop_name/' to fetch the required shop name with details
 
 and pass headers{
